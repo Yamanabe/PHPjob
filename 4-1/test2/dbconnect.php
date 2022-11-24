@@ -6,5 +6,5 @@ $db['user'] = "root";
 // ユーザー名のパスワード
 $db['pass'] = "root";
 // データベース名
-$db['dbname'] = "loginmanagement";
+$db['dbname'] = "YIGroupblog";
 ?>
