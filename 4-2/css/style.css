@@ -1,0 +1,27 @@
+.header {
+    display: flex;
+    flex-flow: wrap column;
+    height: 120px;
+    width: 1000px;
+}
+
+.logo {
+    height: 120px;
+    width: 200px;
+    background-color: #add8e6;
+    margin: 0;
+}
+
+.name { 
+    height: 60px;
+    width: 800px;
+    background-color: #87ceeb;
+    margin: 0;
+}
+
+.login {
+    height: 60px;
+    width: 800px;
+    background-color: #00ffff;
+    margin: 0;
+}
