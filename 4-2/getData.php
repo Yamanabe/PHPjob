@@ -31,7 +31,7 @@ class getData{
      */
     public function getPostData(){
         $getposts_sql = "SELECT * FROM posts ORDER BY id desc";
-        $post_data = $this->pdo->query($getposts_sql);
+        $post_data = $this->pdo->query($getposts_sql)->fetch(PDO::FETCH_ASSOC);
         return $post_data;
     }
 }

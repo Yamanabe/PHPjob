@@ -1,7 +1,6 @@
 <?php
 require_once("getData.php");
-$user = new getData();
-$user->getUserData();
+$getdata = new getData();
 ?>
 
 <!DOCTYPE html>
@@ -16,8 +15,28 @@ $user->getUserData();
 <body>
     <div class="header">
         <img src="img/logo.png" class="logo">
-        <p class="name">ようこそ <?php echo $user->getUserData()['last_name'].$user->getUserData()['first_name']; ?> さん</p>
-        <p class="login">最終ログイン日: <?php echo $user->getUserData()['last_login']; ?></p>
+        <p class="name">ようこそ <?php echo $getdata->getUserData()['last_name'].$getdata->getUserData()['first_name']; ?> さん</p>
+        <p class="login">最終ログイン日: <?php echo $getdata->getUserData()['last_login']; ?></p>
     </div>
+    <table>
+        <tr>
+            <th>記事ID</th>
+            <th>タイトル</th>
+            <th>カテゴリ</th>
+            <th>本文</th>
+            <th>投稿日</th>
+        </tr>
+        <?php 
+            while($post = $getdata->getPostData()) {
+                echo "<tr>";
+                echo "<td>".$post['id']."</td>";
+                echo "<td>".$post['title']."</td>";
+                echo "<td>".$post['category_no']."</td>";
+                echo "<td>".$post['comment']."</td>";
+                echo "<td>".$post['created']."</td>";
+                echo "</tr>";
+            }
+        ?>
+    </table>
 </body>
 </html>
