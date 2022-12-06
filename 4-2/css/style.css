@@ -25,3 +25,11 @@
     background-color: #00ffff;
     margin: 0;
 }
+
+table {
+    margin: 10px auto;
+}
+
+.tableheader {
+    text-align: center;
+}

@@ -1,6 +1,7 @@
 <?php
 require_once("getData.php");
 $getdata = new getData();
+$post = $getdata->getPostData();
 ?>
 
 <!DOCTYPE html>
@@ -19,7 +20,7 @@ $getdata = new getData();
         <p class="login">最終ログイン日: <?php echo $getdata->getUserData()['last_login']; ?></p>
     </div>
     <table>
-        <tr>
+        <tr class="tableheader">
             <th>記事ID</th>
             <th>タイトル</th>
             <th>カテゴリ</th>
@@ -27,13 +28,13 @@ $getdata = new getData();
             <th>投稿日</th>
         </tr>
         <?php 
-            while($post = $getdata->getPostData()) {
+            foreach($post as $val) {
                 echo "<tr>";
-                echo "<td>".$post['id']."</td>";
-                echo "<td>".$post['title']."</td>";
-                echo "<td>".$post['category_no']."</td>";
-                echo "<td>".$post['comment']."</td>";
-                echo "<td>".$post['created']."</td>";
+                echo "<td>".$val->id."</td>";
+                echo "<td>".$val->title."</td>";
+                echo "<td>".$val->category_no."</td>";
+                echo "<td>".$val->comment."</td>";
+                echo "<td>".$val->created."</td>";
                 echo "</tr>";
             }
         ?>
