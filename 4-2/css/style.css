@@ -17,6 +17,8 @@
     width: 800px;
     background-color: #87ceeb;
     margin: 0;
+    text-align: right;
+    line-height: 60px;
 }
 
 .login {
@@ -24,12 +26,25 @@
     width: 800px;
     background-color: #00ffff;
     margin: 0;
+    text-align: right;
+    line-height: 60px;
 }
 
 table {
     margin: 10px auto;
 }
 
-.tableheader {
+tr th {
     text-align: center;
+    background-color: #87ceeb;
+}
+
+tr td {
+    background-color: #e0ffff;
+}
+
+.footer {
+    width: 1000px;
+    height: 50px;
+    background-color: #00ced1;
 }
