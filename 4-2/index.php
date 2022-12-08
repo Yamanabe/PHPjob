@@ -20,31 +20,33 @@ $posts = $getdata->getPostData();
         <p class="name">ようこそ <?php echo $user['last_name'].$user['first_name']; ?> さん</p>
         <p class="login">最終ログイン日: <?php echo $user['last_login']; ?></p>
     </div>
-    <table>
-        <tr class="tableheader">
-            <th>記事ID</th>
-            <th>タイトル</th>
-            <th>カテゴリ</th>
-            <th>本文</th>
-            <th>投稿日</th>
-        </tr>
-        <?php foreach($posts as $post) { ?>
-            <tr>
-                <td><?php echo $post['id']; ?></td>
-                <td><?php echo $post['title']; ?></td>
-                <td><?php if($post['category_no'] == 1) {
-                    echo '食事';
-                } elseif($post['category_no'] == 2) {
-                    echo '旅行';
-                } else {
-                    echo 'その他';
-                }; ?></td>
-                <td><?php echo $post['comment']; ?></td>
-                <td><?php echo $post['created']; ?></td>
+    <div class="table">
+        <table>
+            <tr class="tableheader">
+                <th>記事ID</th>
+                <th>タイトル</th>
+                <th>カテゴリ</th>
+                <th>本文</th>
+                <th>投稿日</th>
             </tr>
-        <?php } ?>
-        
-    </table>
-    <div class="footer"><p>Y&I group.inc</p></div>
+            <?php foreach($posts as $post) { ?>
+                <tr>
+                    <td><?php echo $post['id']; ?></td>
+                    <td><?php echo $post['title']; ?></td>
+                    <td><?php if($post['category_no'] == 1) {
+                        echo '食事';
+                    } elseif($post['category_no'] == 2) {
+                        echo '旅行';
+                    } else {
+                        echo 'その他';
+                    }; ?></td>
+                    <td><?php echo $post['comment']; ?></td>
+                    <td><?php echo $post['created']; ?></td>
+                </tr>
+            <?php } ?>
+            
+        </table>
+    </div>
+    <div class="footer"><span>Y&I group.inc</span></div>
 </body>
 </html>
