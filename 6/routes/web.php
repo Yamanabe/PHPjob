@@ -15,4 +15,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('tweet/create', 'TweetController@add');
+Route::get('tweet/create', 'TweetController@add')->middleware('auth');
+Route::post('tweet/create', 'TweetController@create')->middleware('auth');
+Route::get('tweet/create', 'TweetController@index')->middleware('auth');
+Route::get('tweet/delete', 'TweetController@delete')->middleware('auth');
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

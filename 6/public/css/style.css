@@ -1,0 +1,33 @@
+body {
+    width: 450px;
+    margin: auto;
+    background-color: #1f1e33;
+    color: white;
+}
+
+.form-control {
+    width: 450px;
+}
+
+.text-right {
+    margin-right: 10px;
+}
+
+.done {
+    display: block;
+    margin: 0 0 20px auto;
+}
+
+.card {
+    background-color: #1f1e33;
+    border-color: white;
+    padding: 20px;
+}
+
+.bcard {
+    border-color: #1f1e33;
+}
+
+.user-name {
+    margin-bottom: 10px;
+}
