@@ -1,5 +1,43 @@
 @media screen and (max-width: 479px) {
    body {
     width: 200px;
-   } 
+    height: 600px;
+   }
+   
+   .header {
+      width: 200px;
+      height: 200px;
+   }
+
+   .header-item {
+      width: 60px;
+      height: 160px;
+      position: absolute;
+      top: 20px;
+      left: 75px;
+      flex-direction: column;
+   }
+
+   .main {
+      display: block;
+   }
+
+   .left {
+      width: 200px;
+      height: 100px;
+   }
+
+   .right {
+      width: 200px;
+      height: 200px;
+   }
+
+   .right-container {
+      top: 325px;
+      left: 35px;
+   }
+
+   .footer {
+      width: 200px;
+   }
 }
